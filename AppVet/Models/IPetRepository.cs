@@ -12,6 +12,6 @@ namespace AppVet.Models
         void Edit(PetModel petModel);
         void Delete(PetModel petModel);
         IEnumerable<PetModel> GetAll();
-        IEnumerable<PetModel> GetByValue(); // for search
+        IEnumerable<PetModel> GetByValue(string search); // for search
     }
 }
