@@ -22,6 +22,7 @@ namespace AppVet.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPage1);
+            btnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -53,6 +54,27 @@ namespace AppVet.Views
         public void SetPetListBindingSource(BindingSource petList)
         {
             dgvListPets.DataSource = petList;
+        }
+
+        //sigleton pattern to open one instance window
+        private static PetView instance;
+        public static PetView GetInstance(Form parentContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PetView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+                
+            else
+            {
+                if(instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
         }
     }
 }
