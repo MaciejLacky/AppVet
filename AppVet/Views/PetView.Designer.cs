@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPagePetList = new System.Windows.Forms.TabPage();
             this.dgvListPets = new System.Windows.Forms.DataGridView();
             this.btnAddPet = new System.Windows.Forms.Button();
             this.btnEditPet = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             this.btnSearchPet = new System.Windows.Forms.Button();
             this.tbSearchPet = new System.Windows.Forms.TextBox();
             this.lblSearchPet = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPagePetDetails = new System.Windows.Forms.TabPage();
             this.tbPetColour = new System.Windows.Forms.TextBox();
             this.tbPetType = new System.Windows.Forms.TextBox();
             this.tbPetName = new System.Windows.Forms.TextBox();
@@ -53,9 +53,9 @@
             this.lblPetId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPagePetList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListPets)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tabPagePetDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -91,8 +91,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPagePetList);
+            this.tabControl1.Controls.Add(this.tabPagePetDetails);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 48);
             this.tabControl1.Name = "tabControl1";
@@ -100,22 +100,22 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 402);
             this.tabControl1.TabIndex = 2;
             // 
-            // tabPage2
+            // tabPagePetList
             // 
-            this.tabPage2.Controls.Add(this.dgvListPets);
-            this.tabPage2.Controls.Add(this.btnAddPet);
-            this.tabPage2.Controls.Add(this.btnEditPet);
-            this.tabPage2.Controls.Add(this.btnDeletePet);
-            this.tabPage2.Controls.Add(this.btnSearchPet);
-            this.tabPage2.Controls.Add(this.tbSearchPet);
-            this.tabPage2.Controls.Add(this.lblSearchPet);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 374);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pet list";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPagePetList.Controls.Add(this.dgvListPets);
+            this.tabPagePetList.Controls.Add(this.btnAddPet);
+            this.tabPagePetList.Controls.Add(this.btnEditPet);
+            this.tabPagePetList.Controls.Add(this.btnDeletePet);
+            this.tabPagePetList.Controls.Add(this.btnSearchPet);
+            this.tabPagePetList.Controls.Add(this.tbSearchPet);
+            this.tabPagePetList.Controls.Add(this.lblSearchPet);
+            this.tabPagePetList.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePetList.Name = "tabPagePetList";
+            this.tabPagePetList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePetList.Size = new System.Drawing.Size(792, 374);
+            this.tabPagePetList.TabIndex = 1;
+            this.tabPagePetList.Text = "Pet list";
+            this.tabPagePetList.UseVisualStyleBackColor = true;
             // 
             // dgvListPets
             // 
@@ -187,25 +187,25 @@
             this.lblSearchPet.TabIndex = 0;
             this.lblSearchPet.Text = "Search Pet:";
             // 
-            // tabPage1
+            // tabPagePetDetails
             // 
-            this.tabPage1.Controls.Add(this.tbPetColour);
-            this.tabPage1.Controls.Add(this.tbPetType);
-            this.tabPage1.Controls.Add(this.tbPetName);
-            this.tabPage1.Controls.Add(this.tbPetId);
-            this.tabPage1.Controls.Add(this.btnCancel);
-            this.tabPage1.Controls.Add(this.btnSave);
-            this.tabPage1.Controls.Add(this.lblPetColour);
-            this.tabPage1.Controls.Add(this.lblPetType);
-            this.tabPage1.Controls.Add(this.lblpetName);
-            this.tabPage1.Controls.Add(this.lblPetId);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 374);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pet details";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPagePetDetails.Controls.Add(this.tbPetColour);
+            this.tabPagePetDetails.Controls.Add(this.tbPetType);
+            this.tabPagePetDetails.Controls.Add(this.tbPetName);
+            this.tabPagePetDetails.Controls.Add(this.tbPetId);
+            this.tabPagePetDetails.Controls.Add(this.btnCancel);
+            this.tabPagePetDetails.Controls.Add(this.btnSave);
+            this.tabPagePetDetails.Controls.Add(this.lblPetColour);
+            this.tabPagePetDetails.Controls.Add(this.lblPetType);
+            this.tabPagePetDetails.Controls.Add(this.lblpetName);
+            this.tabPagePetDetails.Controls.Add(this.lblPetId);
+            this.tabPagePetDetails.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePetDetails.Name = "tabPagePetDetails";
+            this.tabPagePetDetails.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePetDetails.Size = new System.Drawing.Size(792, 374);
+            this.tabPagePetDetails.TabIndex = 0;
+            this.tabPagePetDetails.Text = "Pet details";
+            this.tabPagePetDetails.UseVisualStyleBackColor = true;
             // 
             // tbPetColour
             // 
@@ -232,8 +232,10 @@
             // 
             this.tbPetId.Location = new System.Drawing.Point(52, 68);
             this.tbPetId.Name = "tbPetId";
+            this.tbPetId.ReadOnly = true;
             this.tbPetId.Size = new System.Drawing.Size(119, 23);
             this.tbPetId.TabIndex = 6;
+            this.tbPetId.Text = "0";
             // 
             // btnCancel
             // 
@@ -301,11 +303,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.tabPagePetList.ResumeLayout(false);
+            this.tabPagePetList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListPets)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPagePetDetails.ResumeLayout(false);
+            this.tabPagePetDetails.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -315,7 +317,7 @@
         private Label label1;
         private Panel panel1;
         private TabControl tabControl1;
-        private TabPage tabPage2;
+        private TabPage tabPagePetList;
         private DataGridView dgvListPets;
         private Button btnAddPet;
         private Button btnEditPet;
@@ -323,7 +325,7 @@
         private Button btnSearchPet;
         private TextBox tbSearchPet;
         private Label lblSearchPet;
-        private TabPage tabPage1;
+        private TabPage tabPagePetDetails;
         private TextBox tbPetColour;
         private TextBox tbPetType;
         private TextBox tbPetName;

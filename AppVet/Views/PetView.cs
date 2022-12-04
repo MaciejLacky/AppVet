@@ -21,7 +21,7 @@ namespace AppVet.Views
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
-            tabControl1.TabPages.Remove(tabPage1);
+            tabControl1.TabPages.Remove(tabPagePetDetails);
             btnClose.Click += delegate { this.Close(); };
         }
 
@@ -33,6 +33,48 @@ namespace AppVet.Views
                 if(e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
+            btnAddPet.Click += delegate 
+            { 
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPagePetList);
+                tabControl1.TabPages.Add(tabPagePetDetails);
+                tabPagePetDetails.Text = "Add new pet";
+            };
+            btnEditPet.Click += delegate 
+            { 
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPagePetList);
+                tabControl1.TabPages.Add(tabPagePetDetails);
+                tabPagePetDetails.Text = "Edit pet";
+            };
+            btnSave.Click += delegate 
+            { 
+                SaveEvent?.Invoke(this, EventArgs.Empty); 
+                if(isSuccessful)
+                {
+                    tabControl1.TabPages.Remove(tabPagePetDetails);
+                    tabControl1.TabPages.Add(tabPagePetList);
+                }
+                MessageBox.Show(Message);
+
+            };
+            btnCancel.Click += delegate 
+            { 
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPagePetDetails);
+                tabControl1.TabPages.Add(tabPagePetList);
+            };
+            btnDeletePet.Click += delegate 
+            { 
+                
+                var result = MessageBox.Show("Are you want to delete this item?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+
         }
 
         public string PetId { get => tbPetId.Text; set => tbPetId.Text = value; }
