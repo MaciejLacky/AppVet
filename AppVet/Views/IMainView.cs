@@ -8,9 +8,13 @@ namespace AppVet.Views
 {
     public interface IMainView
     {
-        event EventHandler ShowPetView;
+        event EventHandler ShowPetView;        
         event EventHandler ShowOwnerView;
         event EventHandler ShowVetsView;
+
+        void CustomizeDesign();
+        void HideSubMenu();
+        void ShowSubMenu(Panel submenu);
 
     }
 }

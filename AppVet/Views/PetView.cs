@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppVet.Presenters.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,26 +98,9 @@ namespace AppVet.Views
         {
             dgvListPets.DataSource = petList;
         }
-
-        //sigleton pattern to open one instance window
-        private static PetView instance;
         public static PetView GetInstance(Form parentContainer)
         {
-            if (instance == null || instance.IsDisposed)
-            {
-                instance = new PetView();
-                instance.MdiParent = parentContainer;
-                instance.FormBorderStyle = FormBorderStyle.None;
-                instance.Dock = DockStyle.Fill;
-            }
-                
-            else
-            {
-                if(instance.WindowState == FormWindowState.Minimized)
-                    instance.WindowState = FormWindowState.Normal;
-                instance.BringToFront();
-            }
-            return instance;
+            return Instance<PetView>.Get(parentContainer);
         }
     }
 }

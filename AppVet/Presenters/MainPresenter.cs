@@ -19,6 +19,22 @@ namespace AppVet.Presenters
             this.mainView = mainView;
             this.sqlConnectionString = sqlConnectionString;
             this.mainView.ShowPetView += ShowPetsView;
+            this.mainView.ShowOwnerView += ShowOwnerView;
+            this.mainView.ShowVetsView += ShowVetsView;
+        }
+
+        private void ShowVetsView(object? sender, EventArgs e)
+        {
+            var view = VetView.GetInstance((MainView)mainView);
+            //IOwnerRepository repository = new OwnerRepository(sqlConnectionString);
+            new VetPresenter(view);
+        }
+
+        private void ShowOwnerView(object? sender, EventArgs e)
+        {
+            var  view = OwnerView.GetInstance((MainView)mainView);
+            //IOwnerRepository repository = new OwnerRepository(sqlConnectionString);
+            new OwnerPresenter(view);
         }
 
         private void ShowPetsView(object? sender, EventArgs e)
