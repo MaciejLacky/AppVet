@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pMainView = new System.Windows.Forms.Panel();
+            this.btnMain3 = new System.Windows.Forms.Button();
             this.panelSubmenu2 = new System.Windows.Forms.Panel();
             this.btnMain2Sub3 = new System.Windows.Forms.Button();
             this.btnMain2Sub2 = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btnMain1Sub2 = new System.Windows.Forms.Button();
             this.btnMain1Sub1 = new System.Windows.Forms.Button();
             this.btnPets = new System.Windows.Forms.Button();
-            this.btnMain3 = new System.Windows.Forms.Button();
             this.pMainView.SuspendLayout();
             this.panelSubmenu2.SuspendLayout();
             this.panelSubmenu1.SuspendLayout();
@@ -59,6 +59,22 @@
             this.pMainView.Name = "pMainView";
             this.pMainView.Size = new System.Drawing.Size(154, 561);
             this.pMainView.TabIndex = 0;
+            // 
+            // btnMain3
+            // 
+            this.btnMain3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMain3.FlatAppearance.BorderSize = 0;
+            this.btnMain3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMain3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMain3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMain3.Location = new System.Drawing.Point(0, 373);
+            this.btnMain3.Name = "btnMain3";
+            this.btnMain3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMain3.Size = new System.Drawing.Size(154, 45);
+            this.btnMain3.TabIndex = 4;
+            this.btnMain3.Text = "Main category 3";
+            this.btnMain3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMain3.UseVisualStyleBackColor = true;
             // 
             // panelSubmenu2
             // 
@@ -133,7 +149,7 @@
             this.btnMain2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMain2.Size = new System.Drawing.Size(154, 45);
             this.btnMain2.TabIndex = 2;
-            this.btnMain2.Text = "Owners";
+            this.btnMain2.Text = "Main category 2";
             this.btnMain2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMain2.UseVisualStyleBackColor = true;
             // 
@@ -210,25 +226,9 @@
             this.btnPets.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPets.Size = new System.Drawing.Size(154, 45);
             this.btnPets.TabIndex = 0;
-            this.btnPets.Text = "Pets";
+            this.btnPets.Text = "Main category 1";
             this.btnPets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPets.UseVisualStyleBackColor = true;
-            // 
-            // btnMain3
-            // 
-            this.btnMain3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMain3.FlatAppearance.BorderSize = 0;
-            this.btnMain3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMain3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMain3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMain3.Location = new System.Drawing.Point(0, 373);
-            this.btnMain3.Name = "btnMain3";
-            this.btnMain3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMain3.Size = new System.Drawing.Size(154, 45);
-            this.btnMain3.TabIndex = 4;
-            this.btnMain3.Text = "Vets";
-            this.btnMain3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMain3.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
