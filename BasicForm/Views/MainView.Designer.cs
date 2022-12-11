@@ -72,7 +72,7 @@
             this.btnMain3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMain3.Size = new System.Drawing.Size(154, 45);
             this.btnMain3.TabIndex = 4;
-            this.btnMain3.Text = "Main category 3";
+            this.btnMain3.Text = "Vets";
             this.btnMain3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMain3.UseVisualStyleBackColor = true;
             // 
@@ -149,7 +149,7 @@
             this.btnMain2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMain2.Size = new System.Drawing.Size(154, 45);
             this.btnMain2.TabIndex = 2;
-            this.btnMain2.Text = "Main category 2";
+            this.btnMain2.Text = "Owners";
             this.btnMain2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMain2.UseVisualStyleBackColor = true;
             // 
@@ -226,7 +226,7 @@
             this.btnPets.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPets.Size = new System.Drawing.Size(154, 45);
             this.btnPets.TabIndex = 0;
-            this.btnPets.Text = "Main category 1";
+            this.btnPets.Text = "Pets";
             this.btnPets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPets.UseVisualStyleBackColor = true;
             // 
